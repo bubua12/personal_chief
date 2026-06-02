@@ -15,7 +15,7 @@ web_search = TavilySearch(
 model = init_chat_model(
     model="mimo-v2.5",
     model_provider="anthropic",
-    base_url="https://token-plan-cn.xiaomimimo.com/anthropic",
+    base_url=os.getenv("MIMO_ANTHROPIC_BASE_URL"),
     api_key=os.getenv("MIMO_API_KEY")
 )
 
